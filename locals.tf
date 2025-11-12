@@ -2,8 +2,8 @@ locals {
   common_name = "${var.project}- ${var.environment}"
   # vpc_id      = data.aws_ssm_parameter.vpc_id.value
 
-  private_subnet_id  = split(",", data.aws_ssm_parameter.private_subnet_ids.value)[0]
-  private_subnet_ids = split(",", data.aws_ssm_parameter.private_subnet_ids.value)
+  # private_subnet_id  = split(",", data.aws_ssm_parameter.private_subnet_ids.value)[0]
+  # private_subnet_ids = split(",", data.aws_ssm_parameter.private_subnet_ids.value)
   #   backend_alb_listener_arn = data.aws_ssm_parameter.backend_alb_listener_arn.value
   backend_alb_listener_arn  = data.aws_ssm_parameter.backend_alb_listener_arn.value
   frontend_alb_listener_arn = data.aws_ssm_parameter.frontend_alb_listener_arn.value
